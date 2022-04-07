@@ -1,0 +1,11 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "packages/vuepress-plugin-image-comparator"
+        }
+    ],
+    "settings": {}
+}

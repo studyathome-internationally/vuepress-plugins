@@ -1,0 +1,45 @@
+{
+  "name": "vuepress-plugin-image-comparator",
+  "version": "0.0.0",
+  "description": "VuePress Plugin for image comparison",
+  "keywords": [
+    "vuepress-plugin",
+    "vuepress",
+    "plugin",
+    "markdown",
+    "image",
+    "comparison"
+  ],
+  "author": "Alija Sabic <sabic.alija@gmail.com>",
+  "homepage": "https://github.com/studyathome-internationally/vuepress-plugins/tree/master/packages/vuepress-plugin-image-comparator",
+  "license": "GPL-3.0",
+  "main": "lib/node/index.js",
+  "types": "lib/node/index.d.ts",
+  "files": [
+    "README.md",
+    "LICENSE",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studyathome-internationally/vuepress-plugins.git"
+  },
+  "scripts": {
+    "build": "tsc -b tsconfig.build.json",
+    "clean": "rimraf lib *.tsbuildinfo && tsc -b tsconfig.build.json --clean",
+    "copy": "cpx \"src/**/*.{d.ts,vue,styl,scss}\" lib"
+  },
+  "bugs": {
+    "url": "https://github.com/studyathome-internationally/vuepress-plugins/issues"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/vue-fontawesome": "^3.0.0-5",
+    "@vuepress/client": "^2.0.0-beta.37",
+    "@vuepress/core": "^2.0.0-beta.37",
+    "stylus": "^0.57.0",
+    "stylus-loader": "^6.2.0",
+    "vue": "^3.2.31"
+  }
+}
