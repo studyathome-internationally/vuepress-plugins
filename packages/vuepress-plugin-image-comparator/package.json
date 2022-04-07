@@ -27,7 +27,7 @@
   "scripts": {
     "build": "tsc -b tsconfig.build.json",
     "clean": "rimraf lib *.tsbuildinfo && tsc -b tsconfig.build.json --clean",
-    "copy": "cpx \"src/**/*.{d.ts,vue,styl,scss}\" lib"
+    "copy": "cpx \"src/**/*.{d.ts,vue,styl,stylus,scss}\" lib"
   },
   "bugs": {
     "url": "https://github.com/studyathome-internationally/vuepress-plugins/issues"
@@ -41,5 +41,8 @@
     "stylus": "^0.57.0",
     "stylus-loader": "^6.2.0",
     "vue": "^3.2.31"
+  },
+  "devDependencies": {
+    "cpx2": "^4.2.0"
   }
 }
