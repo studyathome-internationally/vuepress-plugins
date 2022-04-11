@@ -1,11 +1,6 @@
-import { defineClientAppEnhance } from "@vuepress/client";
-import { h } from "vue";
-import Comparator from "./components/Comparator";
-import ComparatorVite from "./components/ComparatorVite";
+import { defineClientAppEnhance } from '@vuepress/client';
+import Comparator from './components/Comparator.vue';
 
-
-import "./styles/index.styl";
-
-export default defineClientAppEnhance(({ app /*, router, siteData */ }) => {
-  app.component("Comparator", h(Comparator));
+export default defineClientAppEnhance(({ app, router }) => {
+  app.component('Comparator', Comparator)
 })
