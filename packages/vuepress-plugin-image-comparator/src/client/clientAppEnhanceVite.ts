@@ -1,8 +1,6 @@
 import { defineClientAppEnhance } from "@vuepress/client";
 import { h } from "vue";
-import Comparator from "./components/Comparator";
-import ComparatorVite from "./components/ComparatorVite";
-
+import Comparator from "./components/ComparatorVite";
 
 import "./styles/index.styl";
 

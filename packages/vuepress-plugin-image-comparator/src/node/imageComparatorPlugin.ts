@@ -20,8 +20,9 @@ export const imageComparatorPlugin: Plugin<ImageComparatorPluginOptions> = (opti
       md.use(require("./markdown/comparator").default, options);
     },
     clientAppEnhanceFiles: [
-      path.resolve(__dirname, "../client/clientAppEnhance.js"),
+      path.resolve(__dirname, `../client/clientAppEnhance${"@vuepress/bundler-vite" === app.options.bundler ? "Vite": ""}.js`),
       path.resolve(__dirname, "../client/clientAppEnhanceIcons.js")
     ]
+    // clientAppEnhanceFiles: path.resolve(__dirname, "../client/clientAppEnhanceIcons.js")
   }
 }
