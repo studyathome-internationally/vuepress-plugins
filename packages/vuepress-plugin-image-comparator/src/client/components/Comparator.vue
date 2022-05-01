@@ -70,7 +70,9 @@ img
 .comparator
   width fit-content
   position relative
-  margin 2rem auto
+  margin 0 auto
+  padding-bottom 1rem
+  height 100%
 
   .original, .comparison
     img
