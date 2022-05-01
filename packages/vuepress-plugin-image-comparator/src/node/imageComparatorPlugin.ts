@@ -13,9 +13,9 @@ export type ImageComparatorPluginOptions = {
   include?: PathSpec[]
 };
 
-export const imageComparatorPlugin: Plugin<ImageComparatorPluginOptions> = (options, app) => {
+export const imageComparatorPlugin: Plugin = (options : ImageComparatorPluginOptions, app) => {
   return {
-    name: "vuepress-plugin-image-comparator2",
+    name: "vuepress-plugin-image-comparator",
     extendsMarkdown: (md) => {
       md.use(require("./markdown/comparator").default, options)
     },

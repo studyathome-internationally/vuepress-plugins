@@ -1,11 +1,11 @@
-# `vuepress-plugin-image-comparator2`
+# `vuepress-plugin-image-comparator`
 
 > TODO: description
 
 ## Usage
 
 ```
-const vuepressPluginImageComparator2 = require('vuepress-plugin-image-comparator2');
+const { vuepressPluginImageComparator } = require('vuepress-plugin-image-comparator');
 
 // TODO: DEMONSTRATE API
 ```
