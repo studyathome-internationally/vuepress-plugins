@@ -1,6 +1,6 @@
 <template>
   <div class="comparator">
-    <div ref="original" class="original">
+    <div ref="initial" class="original">
       <slot name="original"></slot>
     </div>
     <div class="slider-container" :style="{ left: `${percentage}%` }">
@@ -24,13 +24,13 @@
 <script setup lang="ts">
 import { ref, onBeforeUnmount } from "vue";
 
-const original = ref<HTMLElement | null>(null);
+const initial = ref<HTMLElement | null>(null);
 const clicked = ref(false);
 const percentage = ref(50);
 
 const slideMove = (e) => {
-  if (!clicked.value || !original.value) return false;
-  const { x, width } = original.value.getBoundingClientRect?.();
+  if (!clicked.value || !initial.value) return false;
+  const { x, width } = initial.value.getBoundingClientRect?.();
   percentage.value = ((e.x - x) / width) * 100;
   if (percentage.value < 0) {
     percentage.value = 0;
