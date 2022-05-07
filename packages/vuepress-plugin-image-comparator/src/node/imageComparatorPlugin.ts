@@ -13,7 +13,7 @@ export type ImageComparatorPluginOptions = {
   include?: PathSpec[]
 };
 
-export const imageComparatorPlugin = (options : ImageComparatorPluginOptions): Plugin => ({
+export const imageComparatorPlugin = (options: ImageComparatorPluginOptions): Plugin => ({
   name: "vuepress-plugin-image-comparator",
   extendsMarkdown: (md) => {
     md.use(require("./markdown/comparator").default, options)
@@ -22,4 +22,4 @@ export const imageComparatorPlugin = (options : ImageComparatorPluginOptions): P
     path.resolve(__dirname, '../client/clientAppEnhance.js'),
     path.resolve(__dirname, '../client/clientAppEnhanceIcons.js')
   ]
-})
+});
