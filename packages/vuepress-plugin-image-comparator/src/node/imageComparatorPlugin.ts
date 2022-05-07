@@ -3,7 +3,7 @@ import { path } from "@vuepress/utils";
 
 interface PathSpec {
   path: RegExp;
-  files: RegExp;
+  files: RegExp[];
   from: RegExp;
   to: string;
 }
