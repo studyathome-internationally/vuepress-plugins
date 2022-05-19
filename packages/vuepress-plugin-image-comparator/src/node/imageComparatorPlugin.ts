@@ -18,8 +18,5 @@ export const imageComparatorPlugin = (options: ImageComparatorPluginOptions): Pl
   extendsMarkdown: (md) => {
     md.use(require("./markdown/comparator").default, options)
   },
-  clientAppEnhanceFiles: [
-    path.resolve(__dirname, '../client/clientAppEnhance.js'),
-    path.resolve(__dirname, '../client/clientAppEnhanceIcons.js')
-  ]
+  clientConfigFile: path.resolve(__dirname, '../client/config.js')
 });
