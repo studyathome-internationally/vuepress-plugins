@@ -1,0 +1,41 @@
+{
+  "name": "vuepress-plugin-figure-wrapper",
+  "version": "0.0.0",
+  "description": "VuePress Plugin for wrapping content inside figures",
+  "keywords": [
+    "vuepress-plugin",
+    "vuepress",
+    "plugin",
+    "markdown",
+    "figure",
+    "wrapper"
+  ],
+  "author": "Alija Sabic <sabic.alija@gmail.com>",
+  "homepage": "https://github.com/studyathome-internationally/vuepress-plugins/tree/master/packages/vuepress-plugin-figure-wrapper",
+  "license": "GPL-3.0",
+  "main": "lib/node/index.js",
+  "types": "lib/node/index.d.ts",
+  "files": [
+    "README.md",
+    "LICENSE",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studyathome-internationally/vuepress-plugins.git"
+  },
+  "scripts": {
+    "build": "tsc -b tsconfig.build.json",
+    "clean": "rimraf lib *.tsbuildinfo && tsc -b tsconfig.build.json --clean",
+    "copy": "cpx \"src/**/*.{d.ts,vue,styl,stylus,scss}\" lib"
+  },
+  "bugs": {
+    "url": "https://github.com/studyathome-internationally/vuepress-plugins/issues"
+  },
+  "devDependencies": {
+    "cpx2": "^4.2.0"
+  },
+  "dependencies": {
+    "@vuepress/core": "^2.0.0-beta.48"
+  }
+}

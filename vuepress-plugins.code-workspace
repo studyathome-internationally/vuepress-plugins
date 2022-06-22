@@ -5,6 +5,9 @@
         },
         {
             "path": "packages/vuepress-plugin-image-comparator"
+        },
+        {
+            "path": "packages/vuepress-plugin-figure-wrapper"
         }
     ],
     "settings": {}
