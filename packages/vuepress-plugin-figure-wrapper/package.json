@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-figure-wrapper",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "VuePress Plugin for wrapping content inside figures",
   "keywords": [
     "vuepress-plugin",
