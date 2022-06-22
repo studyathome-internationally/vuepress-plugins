@@ -11,7 +11,7 @@
     "comparison"
   ],
   "author": "Alija Sabic <sabic.alija@gmail.com>",
-  "homepage": "https://github.com/studyathome-internationally/vuepress-plugins/tree/master/packages/vuepress-plugin-image-comparator2",
+  "homepage": "https://github.com/studyathome-internationally/vuepress-plugins/tree/master/packages/vuepress-plugin-image-comparator",
   "license": "GPL-3.0",
   "main": "lib/node/index.js",
   "types": "lib/node/index.d.ts",
