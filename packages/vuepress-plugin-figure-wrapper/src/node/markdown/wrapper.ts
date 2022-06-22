@@ -5,9 +5,9 @@ import type Renderer from "markdown-it/lib/renderer";
 import type { figureWrapperPluginOptions } from "../figureWrapperPlugin";
 
 export default function wrapper(md: MdIt, opts: figureWrapperPluginOptions) {
-  if (opts.enable === false || !md.renderer.rules.figure_open || !md.renderer.rules.figure_close) return;
-  const defaultRendererOpen: any = md.renderer.rules.figure_open;
-  const defaultRendererClose: any = md.renderer.rules.figure_close;
+  if (opts.enable === false) return;
+  const defaultRendererOpen: Renderer.RenderRule | undefined = md.renderer.rules.figure_open;
+  const defaultRendererClose: Renderer.RenderRule | undefined = md.renderer.rules.figure_close;
   const wrapperOpenRule: Renderer.RenderRule = (
     tokens: Token[],
     idx: number,
@@ -15,10 +15,8 @@ export default function wrapper(md: MdIt, opts: figureWrapperPluginOptions) {
     env: any,
     self: Renderer
   ) => {
-    if (defaultRendererOpen) {
-      return `${defaultRendererOpen(tokens, idx, options, env, self)}\n<div class="wrapper">`;
-    }
-    return defaultRendererOpen(tokens, idx, options, env, self);
+    const figure_open = defaultRendererOpen ? defaultRendererOpen(tokens, idx, options, env, self) : self.renderToken(tokens, idx, options);
+    return `<div class="wrapper">\n${figure_open}`;
   }
   const wrapperCloseRule: Renderer.RenderRule = (
     tokens: Token[],
@@ -27,10 +25,8 @@ export default function wrapper(md: MdIt, opts: figureWrapperPluginOptions) {
     env: any,
     self: Renderer
   ) => {
-    if (defaultRendererClose) {
-      return `</div>${defaultRendererClose(tokens, idx, options, env, self)}`;
-    }
-    return defaultRendererClose(tokens, idx, options, env, self);
+    const figure_open = defaultRendererClose ? defaultRendererClose(tokens, idx, options, env, self) : self.renderToken(tokens, idx, options);
+    return `${figure_open}\n</div>`;
   }
   md.renderer.rules.figure_open = wrapperOpenRule;
   md.renderer.rules.figure_close = wrapperCloseRule;
