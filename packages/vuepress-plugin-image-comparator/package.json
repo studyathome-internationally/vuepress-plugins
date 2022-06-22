@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-image-comparator",
-  "version": "0.0.1-alpha.17",
+  "version": "0.0.1",
   "description": "VuePress Plugin for image comparison",
   "keywords": [
     "vuepress-plugin",
