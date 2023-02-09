@@ -1,7 +1,7 @@
 import type { Plugin } from "@vuepress/core";
 import { path } from "@vuepress/utils";
 
-import MdItWrapper from "./markdown/wrapper";
+import MdItWrapper from "./markdown/wrapper.js";
 
 export type figureWrapperPluginOptions = {
   enable?: boolean;
