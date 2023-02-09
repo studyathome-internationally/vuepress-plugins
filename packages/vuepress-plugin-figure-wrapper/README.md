@@ -7,5 +7,5 @@
 ```
 const vuepressPluginFigureWrapper = require('vuepress-plugin-figure-wrapper');
 
-// TODO: DEMONSTRATE API
+// TODO: Demonstrate API
 ```
