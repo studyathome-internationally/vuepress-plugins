@@ -1,5 +1,4 @@
 import type { Plugin } from "@vuepress/core";
-import { path } from "@vuepress/utils";
 
 import MdItWrapper from "./markdown/wrapper.js";
 
