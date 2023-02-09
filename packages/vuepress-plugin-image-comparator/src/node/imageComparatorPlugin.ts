@@ -1,7 +1,7 @@
 import type { Plugin } from "@vuepress/core";
 import { path } from "@vuepress/utils";
 
-import MdItComparator from "./markdown/comparator";
+import MdItComparator from "./markdown/comparator.js";
 
 interface PathSpec {
   path: RegExp;
