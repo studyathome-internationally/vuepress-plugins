@@ -1,5 +1,5 @@
-import { figureWrapperPlugin } from "./figureWrapperPlugin";
+import { figureWrapperPlugin } from "./figureWrapperPlugin.js";
 
-export * from "./figureWrapperPlugin";
+export * from "./figureWrapperPlugin.js";
 
 export default figureWrapperPlugin;
