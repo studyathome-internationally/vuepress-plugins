@@ -1,6 +1,8 @@
 import type { Plugin } from "@vuepress/core";
 import { path } from "@vuepress/utils";
 
+import MdItComparator from "./markdown/comparator";
+
 interface PathSpec {
   path: RegExp;
   files: RegExp[];
@@ -9,14 +11,14 @@ interface PathSpec {
 }
 
 export type ImageComparatorPluginOptions = {
-  enable?: boolean,
-  include?: PathSpec[]
+  enable?: boolean;
+  include?: PathSpec[];
 };
 
 export const imageComparatorPlugin = (options: ImageComparatorPluginOptions): Plugin => ({
   name: "vuepress-plugin-image-comparator",
   extendsMarkdown: (md) => {
-    md.use(require("./markdown/comparator").default, options)
+    md.use(MdItComparator, options);
   },
-  clientConfigFile: path.resolve(__dirname, '../client/config.js')
+  clientConfigFile: path.resolve(__dirname, "../client/config.js"),
 });
