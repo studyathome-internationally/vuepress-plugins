@@ -1,5 +1,5 @@
-import { imageComparatorPlugin } from "./imageComparatorPlugin";
+import { imageComparatorPlugin } from "./imageComparatorPlugin.js";
 
-export * from "./imageComparatorPlugin";
+export * from "./imageComparatorPlugin.js";
 
 export default imageComparatorPlugin;
