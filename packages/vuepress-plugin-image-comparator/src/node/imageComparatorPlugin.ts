@@ -1,7 +1,9 @@
 import type { Plugin } from "@vuepress/core";
-import { path } from "@vuepress/utils";
+import { path, getDirname } from "@vuepress/utils";
 
 import MdItComparator from "./markdown/comparator.js";
+
+const __dirname = getDirname(import.meta.url);
 
 interface PathSpec {
   path: RegExp;
